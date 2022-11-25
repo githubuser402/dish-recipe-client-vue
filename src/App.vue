@@ -1,7 +1,8 @@
 <template>
   <div id="app">
+    <h1>DishRecipes.io</h1>
     <div id="nav">
-    <center><h1>Hello Vue!</h1></center>
+      <router-link to="/product-list/">Product List</router-link>
     </div>
     <router-view/>
   </div>
@@ -12,7 +13,6 @@
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
 }
 
