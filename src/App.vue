@@ -2,7 +2,8 @@
   <div id="app">
     <h1>DishRecipes.io</h1>
     <div id="nav">
-      <router-link to="/product-list/">Product List</router-link>
+      <router-link to="/recipes/">Recipe List</router-link>
+      <!-- <router-link to="/products/">Product List</router-link> -->
     </div>
     <router-view/>
   </div>
@@ -23,6 +24,7 @@
 #nav a {
   font-weight: bold;
   color: #2c3e50;
+  padding: 10px;
 }
 
 #nav a.router-link-exact-active {

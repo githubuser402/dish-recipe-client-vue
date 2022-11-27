@@ -1,11 +1,11 @@
 <template>
-    <div>
-      <p>product detailed view</p>
-      <center><h1>{{ product.name }}</h1></center>
-      <div class="product-description">
-        {{ product.description }}
-      </div>
+  <div>
+    <p>product detailed view</p>
+    <center><h1>{{ product.name }}</h1></center>
+    <div class="product-description">
+      {{ product.description }}
     </div>
+  </div>
 </template>
 
 <script>

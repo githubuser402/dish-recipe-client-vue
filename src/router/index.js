@@ -3,19 +3,29 @@ import VueRouter from 'vue-router';
 
 // components
 
-import ProductList from '@/components/ProductList.vue';
-import ProductDetailed from '@/components/ProductDetailed.vue';
+// import ProductList from '@/components/ProductList.vue';
+// import ProductDetailed from '@/components/ProductDetailed.vue';
+import DishRecipeList from '@/components/DishRecipeList.vue';
+import DishRecipeDetailed from '@/components/DishRecipeDetailed.vue';
 
 Vue.use(VueRouter);
 
 const routes = [
+  // {
+  //   path: '/products/',
+  //   component: ProductList,
+  // },
+  // {
+  //   path: '/products/:product_id/',
+  //   component: ProductDetailed,
+  // },
   {
-    path: '/product-list/',
-    component: ProductList,
+    path: '/recipes/',
+    component: DishRecipeList,
   },
   {
-    path: '/product-list/:product_id/',
-    component: ProductDetailed,
+    path: '/recipes/:dish_id/',
+    component: DishRecipeDetailed,
   },
 ];
 
