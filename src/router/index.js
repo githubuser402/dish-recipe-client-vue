@@ -3,22 +3,14 @@ import VueRouter from 'vue-router';
 
 // components
 
-// import ProductList from '@/components/ProductList.vue';
-// import ProductDetailed from '@/components/ProductDetailed.vue';
 import DishRecipeList from '@/components/DishRecipeList.vue';
 import DishRecipeDetailed from '@/components/DishRecipeDetailed.vue';
+import LoginUser from '@/components/LoginUser.vue';
+import RegisterUser from '@/components/RegisterUser.vue';
 
 Vue.use(VueRouter);
 
 const routes = [
-  // {
-  //   path: '/products/',
-  //   component: ProductList,
-  // },
-  // {
-  //   path: '/products/:product_id/',
-  //   component: ProductDetailed,
-  // },
   {
     path: '/recipes/',
     component: DishRecipeList,
@@ -26,6 +18,14 @@ const routes = [
   {
     path: '/recipes/:dish_id/',
     component: DishRecipeDetailed,
+  },
+  {
+    path: '/login/',
+    component: LoginUser,
+  },
+  {
+    path: '/register/',
+    component: RegisterUser,
   },
 ];
 
