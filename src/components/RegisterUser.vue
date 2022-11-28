@@ -32,14 +32,14 @@ export default {
       if (!this.passwordRepeated()) {
         this.$el.querySelector('#psw-repeat').style.border = '1px solid red';
       }
-      fetch(`${this.$dishApi}register/`,
+      fetch(`${this.$dishApi}user/register/`,
         {
           method: 'POST',
           headers: {
             Accept: 'application/json',
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify({ username: this.username, password: this.password }),
+          body: JSON.stringify({ name: this.username, password: this.password }),
         })
         .then(
           (response) => {
@@ -52,7 +52,8 @@ export default {
         .then(
           (json) => {
             this.token = json.token;
-            console.log(this.token);
+            this.saveToken(this.token);
+            this.$router.push('/');
           },
         );
     },

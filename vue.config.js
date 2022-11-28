@@ -1,5 +1,7 @@
 module.exports = {
+  configureWebpack: {
     devServer: {
-    proxy: this.$dishApi,
+      headers: { "Access-Control-Allow-Origin": "*" }
+    }
   }
-}
+};

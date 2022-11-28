@@ -3,7 +3,8 @@
     <h1>DishRecipes.io</h1>
     <div id="nav">
       <router-link to="/recipes/">Recipe List</router-link>
-      <!-- <router-link to="/products/">Product List</router-link> -->
+      <router-link to="/login/">Login</router-link>
+      <router-link to="/register/">Register</router-link>
     </div>
     <router-view/>
   </div>

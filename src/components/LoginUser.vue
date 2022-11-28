@@ -35,7 +35,38 @@ export default {
   },
   methods: {
     loginUser() {
-      console.log(this.username);
+      fetch(`${this.$dishApi}user/login/`, {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ name: this.username, password: this.password }),
+      })
+        .then(
+          (response) => {
+            if (!response.ok) {
+              if (response.status === 422) {
+                throw new Error('Wrong user credentials');
+              } else if (response.status === 404) {
+                throw new Error('User does not exist');
+              }
+            }
+            return response.json();
+          },
+        )
+        .then(
+          (json) => {
+            this.token = json.token;
+            this.saveToken(this.token);
+            this.$router.push('/');
+          },
+        )
+        .catch(
+          (err) => {
+            alert(err);
+          },
+        );
     },
   },
 };
