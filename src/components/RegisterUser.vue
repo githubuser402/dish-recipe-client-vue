@@ -32,7 +32,7 @@ export default {
       if (!this.passwordRepeated()) {
         this.$el.querySelector('#psw-repeat').style.border = '1px solid red';
       }
-      fetch(`${this.$dishApi}user/register/`,
+      fetch(`${this.$dishApi}/user/register/`,
         {
           method: 'POST',
           headers: {

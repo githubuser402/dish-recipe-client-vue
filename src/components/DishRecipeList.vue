@@ -1,6 +1,5 @@
 <template>
   <div>
-    works works
     <DishRecipeItem
     v-for="recipe in recipes"
     v-bind:recipe="recipe"
@@ -23,7 +22,7 @@ export default {
   },
   methods: {
     fetchDishRecipe() {
-      fetch(`${this.$dishApi}recipes/`)
+      fetch(`${this.$dishApi}/recipes/`)
         .then((response) => response.json())
         .then(
           (json) => {

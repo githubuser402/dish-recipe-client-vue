@@ -7,6 +7,7 @@ import DishRecipeList from '@/components/DishRecipeList.vue';
 import DishRecipeDetailed from '@/components/DishRecipeDetailed.vue';
 import LoginUser from '@/components/LoginUser.vue';
 import RegisterUser from '@/components/RegisterUser.vue';
+import CreateRecipe from '@/components/CreateRecipe.vue';
 
 Vue.use(VueRouter);
 
@@ -26,6 +27,10 @@ const routes = [
   {
     path: '/register/',
     component: RegisterUser,
+  },
+  {
+    path: '/add-dish/',
+    component: CreateRecipe,
   },
 ];
 

@@ -1,11 +1,11 @@
 <template>
-  <div>
-    <p>recipe detailed view</p>
+  <div class="recipe-detailed-view">
     <center><h1>{{ recipe.name }}</h1></center>
     <div class="product-description">
       {{ recipe.recipe }}
     </div>
-    <div v-for="picture in recipe.pictures"  v-bind:key="picture.id">
+    <div class="recipe-picture-container"
+    v-for="picture in recipe.pictures"  v-bind:key="picture.id">
       <img class="recipe-picture" v-bind:src="imgPreUrl() + picture.path" alt="">
     </div>
   </div>
@@ -44,9 +44,15 @@ export default {
 .product-description{
   margin: 10px 40px;
 }
-
+.recipe-picture-container{
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
 .recipe-picture{
   width: 400px;
   height: 400px;
+  margin: 20px;
+  border-radius: 4px;
 }
 </style>

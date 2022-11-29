@@ -35,7 +35,7 @@ export default {
   },
   methods: {
     loginUser() {
-      fetch(`${this.$dishApi}user/login/`, {
+      fetch(`${this.$dishApi}/user/login/`, {
         method: 'POST',
         headers: {
           Accept: 'application/json',

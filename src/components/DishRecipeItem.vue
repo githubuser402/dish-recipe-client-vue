@@ -1,6 +1,5 @@
 <template>
 <div class="recipe-item">
-  ok
   <a :href="recipe.id">
     <div class="name">
       {{ recipe.name }}
