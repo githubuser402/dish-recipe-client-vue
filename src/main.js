@@ -14,10 +14,14 @@ Vue.mixin({
     },
     userHasValidToken() {
       const token = localStorage.getItem(this.$dishApiTokenKey);
+      console.log(token);
       if (token) {
         return true;
       }
       return false;
+    },
+    logoutUser() {
+      localStorage.removeItem(this.$dishApiTokenKey);
     },
   },
 });

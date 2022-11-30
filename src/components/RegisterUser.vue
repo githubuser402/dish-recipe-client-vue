@@ -39,7 +39,7 @@ export default {
             Accept: 'application/json',
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify({ name: this.username, password: this.password }),
+          body: JSON.stringify({ name: this.username.trim(), password: this.password.trim() }),
         })
         .then(
           (response) => {

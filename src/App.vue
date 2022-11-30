@@ -6,6 +6,7 @@
       <router-link to="/add-dish/">Add dishes</router-link>
       <router-link to="/login/">Login</router-link>
       <router-link to="/register/">Register</router-link>
+      <button v-on:click="this.logoutUser()">Logout</button>
     </div>
     <div id="nav" v-else>
       <router-link to="/recipes/">Recipe List</router-link>
@@ -37,7 +38,16 @@ body{
   color: #2c3e50;
   padding: 10px;
 }
-
+#nav button {
+  border: none;
+  background-color: inherit;
+  font-weight: bold;
+  color: #2c3e50;
+  font-size: 16px;
+}
+#nav button:hover {
+ color: #42b983;
+}
 #nav a.router-link-exact-active {
   color: #42b983;
 }
